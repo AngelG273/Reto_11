@@ -43,15 +43,20 @@ Text esta adjunto en el repo en el Archivo_a_contar
 
 Primero:
 ```python
+#Se importa el string texto
 from Archivo_a_contar import texto
 
+#Al ser un string se puede utilizar la herramienta count, se suman las veces que aparece cada vocal minuscula en texto, se puede usar count porque son pocas letras
 Cuenta_de_vocales_m= texto.count("a") + texto.count("e") + texto.count("i") + texto.count("o") + texto.count("u")
 print(f"El numero de apariciones de las vocales minusculas  en Text es = {Cuenta_de_vocales_m}")
 
+#Al ser un string se puede utilizar la herramienta count, se suman las veces que aparece cada vocal mayuscula en texto, se puede usar count porque son pocas letras
 Cuenta_de_vocales_M = texto.count("A") + texto.count("E") + texto.count("I") + texto.count("O") + texto.count("U")
 print(f"El numero de apariciones de las vocales mayusculas en Text es = {Cuenta_de_vocales_M}")
 
+#Se suma el numero total de veces que aparecen las vocales minusculas y mayusculas
 Numero_total = Cuenta_de_vocales_M + Cuenta_de_vocales_m
+#Se imprime el numero total
 print(f"El numero total de vocales es = {Numero_total}")
 ```
 
