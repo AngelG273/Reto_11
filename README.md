@@ -38,15 +38,22 @@ Referencia:
 [https://www.geeksforgeeks.org/]
 
 ### Ejercicio 2:
-Text esta adjunto en el repo
+
+Text esta adjunto en el repo en el Archivo_a_contar
+
+Primero:
 ```python
-Text = """From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008...
-Cuenta_de_vocales_m= Text.count("a") + Text.count("e") + Text.count("i") + Text.count("o") + Text.count("u")
+from Archivo_a_contar import texto
+
+Cuenta_de_vocales_m= texto.count("a") + texto.count("e") + texto.count("i") + texto.count("o") + texto.count("u")
 print(f"El numero de apariciones de las vocales minusculas  en Text es = {Cuenta_de_vocales_m}")
 
-Cuenta_de_vocales_M = Text.count("A") + Text.count("E") + Text.count("I") + Text.count("O") + Text.count("U")
+Cuenta_de_vocales_M = texto.count("A") + texto.count("E") + texto.count("I") + texto.count("O") + texto.count("U")
 print(f"El numero de apariciones de las vocales mayusculas en Text es = {Cuenta_de_vocales_M}")
 
 Numero_total = Cuenta_de_vocales_M + Cuenta_de_vocales_m
 print(f"El numero total de vocales es = {Numero_total}")
 ```
+
+Segundo:
+
