@@ -56,4 +56,27 @@ print(f"El numero total de vocales es = {Numero_total}")
 ```
 
 Segundo:
+```python
+#Se importa el string texto
+from Archivo_a_contar import texto
+
+#Se define la función para poder contar las consonantes en texto
+def Cuenta_de_consonantes(texto_1):
+  #Valor al que se le suma si hay una consonate
+  Suma = 0
+  #Se definen las consonantes
+  Consonantes="bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+  #Se evaluan todas las letras de text_1
+  for i in texto_1:
+    #Si i esta en consonantes se suma 1
+    if i in Consonantes:
+      Suma+=1
+
+  return Suma
+
+if __name__ == "__main__":
+  Num_consonantes = Cuenta_de_consonantes(texto)
+  #Se imprime el numero de consonates
+  print(f"El numero de consonantes en texto es = {Num_consonantes}")
+```
 
