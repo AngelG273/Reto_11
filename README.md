@@ -84,4 +84,45 @@ if __name__ == "__main__":
   #Se imprime el numero de consonates
   print(f"El numero de consonantes en texto es = {Num_consonantes}")
 ```
+Tercero:
+```python
+def contar_palabras(archivo, top_n=50):
+    with open(archivo, "r", encoding="utf-8") as file:
+        contenido = file.read().lower()  # Convertir todo a minúsculas
 
+    # Separar palabras y filtrar solo letras
+    palabras = []
+    palabra_actual = ""
+    
+    for char in contenido:
+        if char.isalpha():  # Si es una letra, la agregamos a la palabra actual
+            palabra_actual += char
+        elif palabra_actual:  # Si encontramos un separador (espacio, punto, etc.), guardamos la palabra
+            palabras.append(palabra_actual)
+            palabra_actual = ""
+
+    if palabra_actual:  # Agregar la última palabra si hay una al final
+        palabras.append(palabra_actual)
+
+    # Contar palabras manualmente
+    frecuencia = {}
+    for palabra in palabras:
+        if palabra in frecuencia:
+            frecuencia[palabra] += 1
+        else:
+            frecuencia[palabra] = 1
+
+    # Ordenar por frecuencia y devolver las top_n palabras
+    palabras_ordenadas = sorted(frecuencia.items(), key=lambda x: x[1], reverse=True)
+
+    return palabras_ordenadas[:top_n]
+
+# Nombre del archivo
+archivo = "Archivo_a_contar.py"
+
+# Ejecutar la función y mostrar resultados
+palabras_mas_repetidas = contar_palabras(archivo)
+
+for palabra, frecuencia in palabras_mas_repetidas:
+    print(f"{palabra}: {frecuencia}")
+```
